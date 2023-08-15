@@ -1,0 +1,43 @@
+.searchContainer {
+    background-color: #000080;
+    color: white;
+}
+
+.headerContainer
+{
+    box-shadow: 0px 4px 4px 0px #FFFFFF14;
+    background-color: #00037C;
+    // background: linear-gradient(180deg, #00037C 0%, rgba(0, 3, 124, 0.645833) 35.42%, rgba(0, 3, 124, 0.328125) 67.19%, rgba(0, 3, 124, 0.145833) 85.42%, rgba(0, 3, 124, 0) 100%);
+    mix-blend-mode: screen;
+}
+.triangle
+{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 40px;
+    border-right-width: 0px;
+    border-top: 40px solid #00037C;
+
+    @media only screen and (min-width: 992px)
+    {
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-left-width: 70px;
+        border-right-width: 0px;
+        border-top: 70px solid #00037C;
+    }
+
+}
+
+.triangle2
+{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 70px;
+    border-right-width: 0px;
+    border-top: 70px solid #00037C;
+
+}
