@@ -1,11 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom/cjs/react-router-dom';
 import BrandMetaData from 'src/components/BrandMetaData';
+import HeaderContainerCustom from 'src/components/HeaderContainerCustom';
 import Carousel from '../../common/carousel/carousel';
 import BrandList from '../../components/BrandList';
 import HeaderContainer from '../../components/HeaderContainer/HeaderContainer';
 import TopRecommendation from '../../components/TopRecommendation';
 
 const SearchResults = () => {
+
+    const [searchResults, setSearchResults] = useState([]);
+    const [error, setError] = useState(false);
+    const location = useLocation();
+    const query = new URLSearchParams(location.search).get("query");
+    const { slug } = useParams();
 
     const brandMap = [
         {id:1,name:'BigBasket',imageURL:'bigbasket.svg',rating:'4',iconURL:'bigbasketIcon.svg'},
@@ -33,19 +42,19 @@ const SearchResults = () => {
     return(
         <>
             <div class="bg-theme-white">
-                <div className="relative w-[90%]">
-                    <HeaderContainer/>
+                <div className="relative md:w-[80%] z-20">
+                    <HeaderContainerCustom query={query}/>
                 </div>
-                <div className='px-4 py-5 md:ml-20 md:pt-5 md:text-xl'>Home / Search Results: Where can i buy groceries faster?</div>
+                <div className='px-4 pt-8 pb-4 text-xs md:ml-20 md:pt-5 md:text-xl'>{`Home / Search Results: ${query}`}</div>
                 <div className='px-4 md:ml-20 md:py-5 md:text-xl results_found'>1,02,345 Results Found</div>
-                <div className="pt-4 px-4 pb-1 md:ml-20 text-2xl font-light">Top 10 Faster Grocery Services</div>
+                <div className="pt-4 px-4 pb-1 md:ml-20 text-lg md:text-2xl font-medium">Top 10 Faster Grocery Services</div>
                 <Carousel className="pb-4 md:ml-20">
                     {brandMap.map(datum =>
                         <BrandList data={datum}/>
                     )}
                 </Carousel>
                 <TopRecommendation title=""/>
-                <div className="py-4 md:py-8">
+                <div className="px-4 py-4 md:py-8">
                 {brandMetaData.map(datum => 
                         <BrandMetaData data={datum}/>
                     )}

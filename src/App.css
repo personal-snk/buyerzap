@@ -12,7 +12,9 @@
   margin: 0 auto;
   /* min-width: 400px; */
   max-width: 1680px;
-  /* padding: 8px; */
+  padding: 62px 0;
+  /* position: absolute; */
+  /* top: 62px; */
 }
 
 @media (prefers-reduced-motion: no-preference) {

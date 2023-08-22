@@ -10,7 +10,7 @@ import searchResults from './pages/searchResults';
 import brandDetails from './pages/brandDetails';
 
 const App = () => {
-  const showFooter = true;
+  const showFooter = false;
   return (
     <Router>
       <div className='h-full'>

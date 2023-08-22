@@ -2,10 +2,6 @@ import React from 'react';
 import Carousel from '../../common/carousel/carousel';
 import Categories from '../../components/Categories';
 import HeaderContainer from '../../components/HeaderContainer/HeaderContainer';
-import MicrosoftPartner from '../../components/MicrosoftPartner';
-import TopRecommendation from '../../components/TopRecommendation';
-import VideoContainer from '../../components/VideoContainer/VideoContainer';
-import WhatWeDoContainer from '../../components/WhatWeDoContainer';
 
 const Home = () => {
 
@@ -25,16 +21,16 @@ const Home = () => {
     return(
         <>
             <div class="bg-theme-white">
-                <div className="relative w-[90%]">
+                <div className="relative w-[90%] md:w-[80%]">
                     <HeaderContainer/>
                 </div>
-                <div className="px-4 pt-6 pb-1 ml-6 md:ml-36 text-3xl">BuyerZ Categories</div>
-                <Carousel className="w-[90%] ml-6 pb-4 md:ml-36">
+                
+                {/* <Carousel className="w-[90%] ml-6 pb-4 md:ml-36">
                     {categoryMap.map(datum =>
                         <Categories data={datum}/>
                     )}
-                </Carousel>
-                <TopRecommendation title={'Top 10 Grocery Service Recommendations'} subtitle={'*Based on NLP Score'}/>
+                </Carousel> */}
+                {/* <TopRecommendation title={'Top 10 Grocery Service Recommendations'} subtitle={'*Based on NLP Score'}/> */}
                 {/* <VideoContainer/>
                 <WhatWeDoContainer/> */}
                 {/* <MicrosoftPartner/> */}
