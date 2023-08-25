@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoContainer from 'src/components/VideoContainer';
 import Carousel from '../../common/carousel/carousel';
 import Categories from '../../components/Categories';
 import HeaderContainer from '../../components/HeaderContainer/HeaderContainer';
@@ -24,12 +25,17 @@ const Home = () => {
                 <div className="relative w-[90%] md:w-[80%]">
                     <HeaderContainer/>
                 </div>
-                
-                {/* <Carousel className="w-[90%] ml-6 pb-4 md:ml-36">
+                <div>
+                <div className="relative w-[90%] ml-8 pt-4 md:w-[80%]">
+                    Categories
+                </div>
+                <Carousel className="w-[90%] ml-6 pb-4 md:ml-36">
                     {categoryMap.map(datum =>
                         <Categories data={datum}/>
                     )}
-                </Carousel> */}
+                </Carousel>
+                </div>
+                <VideoContainer/>
                 {/* <TopRecommendation title={'Top 10 Grocery Service Recommendations'} subtitle={'*Based on NLP Score'}/> */}
                 {/* <VideoContainer/>
                 <WhatWeDoContainer/> */}

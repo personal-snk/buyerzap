@@ -18,7 +18,7 @@ export default function headerContainerCustom(props) {
                 <div className='px-4 md:px-10 xl:px-24 pt-4 relative font-light py-1 text-white'>
                     <SearchBar queryString={queryString}/>
                 </div>
-                <div className='absolute'><img src={pointer} className='w-12 md:w-16'/></div>
+                <div className='absolute'><img src={pointer} className='w-10 md:w-16'/></div>
         </div>
     );
 }
