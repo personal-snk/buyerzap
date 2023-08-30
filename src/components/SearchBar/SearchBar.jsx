@@ -15,7 +15,6 @@ export default function SearchBar(props) {
   const queryString = props.queryString;
 
     useEffect(() => {
-    console.log(queryString);
     setSearch(queryString)
     }, [queryString])
 
@@ -33,8 +32,8 @@ export default function SearchBar(props) {
           value: 'Where can I find grocery services in India?'
         },
         {
-          name: 'Where can I find grocery services near me?',
-          value: 'Where can I find grocery services near me?'
+          name: 'Which is the fastest grocery services near me?',
+          value: 'Which is the fastest grocery services near me?'
         }
       ];
 

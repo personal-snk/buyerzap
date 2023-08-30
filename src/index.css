@@ -5,4 +5,5 @@
 body,
 html {
   font-family: "Helvetica Neue",Roboto, sans-serif;
+  overflow: auto;
 }

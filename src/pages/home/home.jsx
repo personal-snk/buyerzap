@@ -1,4 +1,6 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 import VideoContainer from 'src/components/VideoContainer';
 import Carousel from '../../common/carousel/carousel';
 import Categories from '../../components/Categories';
@@ -6,18 +8,25 @@ import HeaderContainer from '../../components/HeaderContainer/HeaderContainer';
 
 const Home = () => {
 
+    const history = useHistory();
+
     const categoryMap = [
-        {id:1,name:'Grocery',imageURL:'grocery.svg'},
-        {id:2,name:'Education',imageURL:'education.svg'},
-        {id:3,name:'HealthCare',imageURL:'health.svg'},
-        {id:4,name:'Furniture',imageURL:'furniture.svg'},
-        {id:5,name:'Automobiles',imageURL:'auto.svg'},
-        {id:6,name:'Grocery',imageURL:'grocery.svg'},
-        {id:7,name:'Education',imageURL:'education.svg'},
-        {id:8,name:'HealthCare',imageURL:'health.svg'},
-        {id:9,name:'Furniture',imageURL:'furniture.svg'},
-        {id:10,name:'Automobiles',imageURL:'auto.svg'}
+        {id:1,name:'Grocery',imageURL:'grocery.svg',resultQuery:'Which is the fastest grocery services near me?'},
+        {id:2,name:'Education',imageURL:'education.svg',resultQuery:''},
+        {id:3,name:'HealthCare',imageURL:'health.svg',resultQuery:''},
+        {id:4,name:'Furniture',imageURL:'furniture.svg',resultQuery:''},
+        {id:5,name:'Automobiles',imageURL:'auto.svg',resultQuery:''},
+        {id:6,name:'Grocery',imageURL:'grocery.svg',resultQuery:''},
+        {id:7,name:'Education',imageURL:'education.svg',resultQuery:''},
+        {id:8,name:'HealthCare',imageURL:'health.svg',resultQuery:''},
+        {id:9,name:'Furniture',imageURL:'furniture.svg',resultQuery:''},
+        {id:10,name:'Automobiles',imageURL:'auto.svg',resultQuery:''}
     ]
+
+    const selectCategory =(data)=> {
+        // if(data)
+        history.push(`/searchResults?query=${data?.resultQuery}`)
+    }
 
     return(
         <>
@@ -26,20 +35,16 @@ const Home = () => {
                     <HeaderContainer/>
                 </div>
                 <div>
-                <div className="relative w-[90%] ml-8 pt-4 md:w-[80%]">
+                <div className="relative md:text-3xl ml-8 md:ml-40 pt-4 md:pt-10">
                     Categories
                 </div>
                 <Carousel className="w-[90%] ml-6 pb-4 md:ml-36">
                     {categoryMap.map(datum =>
-                        <Categories data={datum}/>
+                        <Categories data={datum} onClick={() => selectCategory(datum)}/>
                     )}
                 </Carousel>
                 </div>
                 <VideoContainer/>
-                {/* <TopRecommendation title={'Top 10 Grocery Service Recommendations'} subtitle={'*Based on NLP Score'}/> */}
-                {/* <VideoContainer/>
-                <WhatWeDoContainer/> */}
-                {/* <MicrosoftPartner/> */}
             </div>
         </>
     )

@@ -12,7 +12,7 @@ export default function HeaderContainer() {
                     <img src={logo} alt='logo' className='w-28 lg:w-64'/>
                 </div>
                 <div className='p-4 text-xs lg:px-16 lg:pt-4 xl:px-24 xl:pt-8 lg:text-lg xl:text-3xl text-[#fff]'>
-                    Social Sentiment Search Engine - Real time social listening with advanced search functionality
+                Powered by Buyer experience & Gen AI technology
                 </div>
                 <div className='px-4 lg:px-16 xl:px-24 pt-2 relative font-light py-1 text-white'>
                     <SearchBar/>

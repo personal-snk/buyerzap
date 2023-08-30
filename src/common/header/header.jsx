@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import NavBar from 'src/components/NavBar';
+import NavBarDesktop from 'src/components/NavBarDesktop';
+import { useMediaQuery } from 'src/hooks/useMediaQuery';
 import './style.css';
 
 const navItems = ['Home', 'About Us', 'Why', 'Services', 'Product', 'Team', 'Contact Us'];
@@ -9,6 +11,9 @@ const isLogin = false;
 function Header() {
 
   const history = useHistory();
+
+  const isResponsive = useMediaQuery(992);
+
   const redirect = (item) => {
     let path = ''
     switch(item){
@@ -24,10 +29,10 @@ function Header() {
   };
 
   return (
-        <header class="fixed top-0 z-30 w-full bg-white px-4 py-4">
-          <div class="flex items-center justify-end mx-auto">
+        <header class="md:headerShadow fixed top-0 z-30 w-full bg-white px-4 py-4">
+          {isResponsive ? <div class="flex items-center justify-end mx-auto">
             <NavBar></NavBar>
-          </div>
+          </div> : <NavBarDesktop></NavBarDesktop>}
         </header>
   );
 }

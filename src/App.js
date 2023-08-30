@@ -8,9 +8,30 @@ import Footer from './common/footer';
 import './App.css'
 import searchResults from './pages/searchResults';
 import brandDetails from './pages/brandDetails';
+import { useAuth0 } from '@auth0/auth0-react';
+import Loading from './common/loading/loading';
+import { PrivateRoute } from './routes/PrivateRoute';
+import Login from './components/Login';
 
 const App = () => {
-  const showFooter = false;
+  const showFooter = true;
+
+  const { isLoading, error,isAuthenticated,loginWithRedirect } = useAuth0();
+
+  if (error) {
+    return <div>Oops... {error.message}</div>;
+  }
+
+  if(!isLoading && !isAuthenticated)
+  {
+    loginWithRedirect();
+    return <Loading />;
+  }
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <Router>
       <div className='h-full'>
@@ -18,10 +39,11 @@ const App = () => {
         <div className="wrapper h-full">
           {/* <ThemeProvider value=''> */}
             <Switch>
-              <Route path={"/"} exact component={Home} />
-              <Route path={'/searchResults'} component={searchResults} />
-              <Route path={'/brandDetails'} component={brandDetails} />
-              <Route path={"/aboutus"} component={About} />
+              <Route exact path="/" isAuthenticated={isAuthenticated} component={Home} />
+              <PrivateRoute path={'/searchResults'} isAuthenticated={isAuthenticated} component={searchResults} />
+              <PrivateRoute path={'/brandDetails'} isAuthenticated={isAuthenticated} component={brandDetails} />
+              <PrivateRoute path={"/aboutus"} isAuthenticated={isAuthenticated} component={About} />
+              {/* <Redirect from="*" to="/" /> */}
             </Switch>
           {/* </ThemeProvider> */}
         </div>

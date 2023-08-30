@@ -26,31 +26,33 @@ function NavBar() {
                 />
           </svg>:
           <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-white"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="#000"
-                                        strokeWidth={2}
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M4 6h16M4 12h16M4 18h16"
-                                        />
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#000"
+              strokeWidth={2}
+          >
+              <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+              />
           </svg>}
         </div>
       </button>
       <nav className={`navbar ${isOpen ? 'opened' : 'closed'}`}>
         <ul className=''>
-          <li><a href="#">About Buyerzap</a></li>
-          <li><a href="#">For Business</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/aboutus">About Buyerzap</a></li>
+          <li><a href="/b2b">For Business</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
         <div className='bg-[#EBEBEB]'>
           <ul>
-            <li><a href="#">Account settings</a></li>
-            <li><a href="#">My Profile</a></li>
+            {/* <li></li> */}
+            <li><a href="/account">Account settings</a></li>
+            <li><a href="/profile">My Profile</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
         </div>
