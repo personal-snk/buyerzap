@@ -15,16 +15,19 @@
       width: 100vw;
     }
   }
+
+  .navbar-container{
+    padding:10px;
+  }
   
   .navbar.opened {
     transform: translateX(0);
   }
   
   .navbar ul {
-    padding: 0;
     list-style-type: none;
     text-align: left;
-    margin: 4rem 2rem 2rem;
+    padding: 2rem 2rem 1rem;
   }
   
   .navbar li {
@@ -36,4 +39,15 @@
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 400;
+  }
+
+  .colorChange
+  {
+    background-color: #d9d9d92d;
+    
+  }
+
+  .userPic
+  {
+    box-shadow: 3px 10px 14px 0px #00000040;
   }

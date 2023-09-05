@@ -4,7 +4,6 @@ import { Route, Redirect } from 'react-router-dom';
 export { PrivateRoute };
 
 function PrivateRoute({ component: Component, isAuthenticated, ...rest }) {
-    debugger
     return (
         <Route {...rest} render={props => {
             if (!isAuthenticated) {

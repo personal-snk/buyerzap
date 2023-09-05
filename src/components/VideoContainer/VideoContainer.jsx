@@ -13,8 +13,8 @@ export default function VideoContainer() {
                 <Video className='flex m-12 md:w-36 md:mx-10 md:flex-[1_1_10%]'/>
                 <div className='flex justify-center md:mx-10 md:flex-[1_1_10%] relative'>
                     <img src={VideoSection} className='mx-12 flex-1 relative'/>
-                    <img src={problem} className='w-24 md:w-36 z-50 absolute top-0 left-[20%]'/>
-                    <img src={solution} className='w-24 md:w-36 z-50 absolute left-[60%]'/>
+                    <img src={problem} className='w-24 md:w-36 z-10 absolute top-0 left-[20%]'/>
+                    <img src={solution} className='w-24 md:w-36 z-10 absolute left-[60%]'/>
                 </div>
             </div>
         </div>

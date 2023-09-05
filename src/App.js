@@ -42,7 +42,7 @@ const App = () => {
               <Route exact path="/" isAuthenticated={isAuthenticated} component={Home} />
               <PrivateRoute path={'/searchResults'} isAuthenticated={isAuthenticated} component={searchResults} />
               <PrivateRoute path={'/brandDetails'} isAuthenticated={isAuthenticated} component={brandDetails} />
-              <PrivateRoute path={"/aboutus"} isAuthenticated={isAuthenticated} component={About} />
+              <Route path={"/aboutus"} component={About} />
               {/* <Redirect from="*" to="/" /> */}
             </Switch>
           {/* </ThemeProvider> */}

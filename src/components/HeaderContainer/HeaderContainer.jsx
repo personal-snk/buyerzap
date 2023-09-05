@@ -17,7 +17,7 @@ export default function HeaderContainer() {
                 <div className='px-4 lg:px-16 xl:px-24 pt-2 relative font-light py-1 text-white'>
                     <SearchBar/>
                 </div>
-                <div className='relative top-5'><img src={pointer} className='w-10 sm:w-16 lg:w-24'/></div>
+                <div className='relative lg:top-5'><img src={pointer} className='w-10 lg:w-16'/></div>
         </div>
     );
 }
