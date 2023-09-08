@@ -43,7 +43,8 @@
 
   .colorChange
   {
-    background-color: #d9d9d92d;
+    background-color: rgba(251, 251, 253, .7);
+    backdrop-filter: saturate(180%) blur(20px);
     
   }
 

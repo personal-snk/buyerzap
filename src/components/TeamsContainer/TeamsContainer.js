@@ -20,12 +20,6 @@ const teamsData = [{
     position: "Data scientist",
     desc:"Data Scientist with around 2 years of working experience in analyzing data, building, and deploying ML models. Capable of creating, developing, testing and building highly adaptive diverse services to translate business and functional qualifications into substantial deliverables. ",
     imageSrc:"deb.svg"
-},{
-    id:4,
-    name:"Rahul Jain",
-    position: "Product designer",
-    desc:"Product designer with 6+ years of experience in building design systems across platforms and capable of doing UX research, Visual/UI design, branding and conceptualization. Demonstrated visual design and team leading experience in 5 years of tenure in Amazon. Ex- Amazon",
-    imageSrc:"rahul.svg"
 },
 {
     id:5,

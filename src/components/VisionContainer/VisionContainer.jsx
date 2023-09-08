@@ -7,9 +7,9 @@ import './style.scss'
 
 export default function visionContainer() {
     return (
-        <div className='visionContainer about py-4 md:py-8 m-auto'> 
+        <div className='about py-4 md:py-8 m-auto'> 
             {/* <div className="flex text-3xl font-medium justify-center">How do we do it?</div> */}
-            <div className='flex flex-col mt-4 md:flex-row flex_[1_1_30%]'>
+            <div className='visionContainer flex flex-col mt-4 md:flex-row flex_[1_1_30%]'>
                 <div className='flex flex-col items-center p-2 m-2 flex-1'>
                     <img src={vision} className='h-20'/>
                     <div className="title text-center m-2 text-3xl text-[#303030]">Our Vision</div>

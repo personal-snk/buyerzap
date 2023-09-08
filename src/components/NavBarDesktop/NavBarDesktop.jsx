@@ -44,7 +44,7 @@ function NavBarDesktop() {
 
     const [colorChange, setColorchange] = useState(false);
     const changeNavbarColor = () => {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 10) {
             setColorchange(true);
         }
         else {
@@ -67,8 +67,8 @@ function NavBarDesktop() {
           <ul className=''>
             <li onClick={() => redirect('/')}><a>Home</a></li>
             <li onClick={() => redirect('/aboutus')}><a>About Buyerzap</a></li>
-            <li onClick={() => redirect('')}><a>For Business</a></li>
-            <li onClick={() => redirect('')}><a>Contact Us</a></li>
+            <li onClick={() => redirect('/for_business')}><a>For Business</a></li>
+            <li onClick={() => redirect('/contact_us')}><a>Contact Us</a></li>
           </ul>
           <div className='bg-[#EBEBEB]'>
             <ul>
@@ -97,8 +97,8 @@ function NavBarDesktop() {
         <div className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
           <a onClick={() => redirect('/')} className="p-2 lg:px-4 md:mx-2 hover:bg-gray-200 rounded ">Home</a>
           <a onClick={() => redirect('/aboutus')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">About</a>
-          <a onClick={() => redirect('/')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">For Business</a>
-          <a onClick={() => redirect('/')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Contact Us</a>
+          <a onClick={() => redirect('/for_business')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">For Business</a>
+          <a onClick={() => redirect('/contact_us')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Contact Us</a>
         </div>
         <div className=" inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">    
         <div className="relative ">

@@ -47,12 +47,6 @@ const SearchResults = () => {
                 </div>
                 <div className='px-4 pt-8 pb-4 text-xs md:ml-20 md:pt-5 md:text-xl'>{`Home / Search Results: ${query}`}</div>
                 <div className='px-4 md:ml-20 md:py-5 md:text-xl results_found'>1,02,345 Results Found</div>
-                {/* <div className="pt-4 px-4 pb-1 md:ml-20 text-lg md:text-2xl font-medium">Top 10 Faster Grocery Services</div>
-                <Carousel className="pb-4 md:ml-20">
-                    {brandMap.map(datum =>
-                        <BrandList data={datum}/>
-                    )}
-                </Carousel> */}
                 <TopRecommendation title=""/>
                 <div className="px-4 py-4 md:py-8">
                 {brandMetaData.map(datum => 
