@@ -65,10 +65,9 @@ function NavBarDesktop() {
             <li onClick={() => redirect('/')}><a>Home</a></li>
             <li onClick={() => redirect('/aboutus')}><a>About Buyerzap</a></li>
             <li onClick={() => redirect('/for_business')}><a>For Business</a></li>
-            {/* <li onClick={() => redirect('/contact_us')}><a>Contact Us</a></li> */}
           </ul>
           <div className='bg-[#EBEBEB]'>
-            <ul>
+            <ul className='px-2 py-1'>
               <li className='pb-4 grid grid-cols-4 gap-2'>
                 <img src={user.picture} className='userPic w-16 rounded-full'/>
                 <div className=''>
@@ -76,9 +75,9 @@ function NavBarDesktop() {
                   <div className='text-3xl'>{user.nickname}</div>
                 </div>
               </li>
-              <li className='pb-4'><a href="/account">Account settings</a></li>
-              <li className='pb-4'><a href="/profile">My Profile</a></li>
-              <li className='pb-4'><a href="#">Logout</a></li>
+              <li className='pb-2'><a href="/account">Account settings</a></li>
+              <li className='pb-2'><a href="/profile">My Profile</a></li>
+              <li className='pb-2' onClick={() => logoutWithRedirect()}><a href="javascript:void(0)">Logout</a></li>
             </ul>
           </div>
         </nav>
