@@ -1,20 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom/cjs/react-router-dom';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom';
 import BrandMetaData from 'src/components/BrandMetaData';
 import HeaderContainerCustom from 'src/components/HeaderContainerCustom';
-import Carousel from '../../common/carousel/carousel';
-import BrandList from '../../components/BrandList';
-import HeaderContainer from '../../components/HeaderContainer/HeaderContainer';
 import TopRecommendation from '../../components/TopRecommendation';
 
 const SearchResults = () => {
 
-    const [searchResults, setSearchResults] = useState([]);
-    const [error, setError] = useState(false);
     const location = useLocation();
     const query = new URLSearchParams(location.search).get("query");
-    const { slug } = useParams();
 
     const brandMap = [
         {id:1,name:'BigBasket',imageURL:'bigbasket.svg',rating:'4',iconURL:'bigbasketIcon.svg'},

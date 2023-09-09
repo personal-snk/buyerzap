@@ -1,4 +1,3 @@
-import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 import VideoContainer from 'src/components/VideoContainer';

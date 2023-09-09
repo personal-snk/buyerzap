@@ -1,10 +1,7 @@
 import React from 'react';
 import './style.css';
-
-import iconImage from 'src/assets/searchResults/zeptoIcon.svg';
-import positiveRating from 'src/assets/brandDetails/positiveRating.svg';
-import negativeRating from 'src/assets/brandDetails/negativeRating.svg';
 import PieChart from 'src/common/pieChart';
+import { getImagePath } from 'src/utils';
 
 const BrandDetails = () => {
     return(
@@ -24,7 +21,7 @@ const BrandDetails = () => {
                     Website             : zeptonow.com
                     </div>
                     <div className='logo_section border-2 border-solid rounded-lg border-[#D9D9D9]'>
-                        <img src={iconImage} className='w-60 md:flex-[1_1_10%]'/>
+                        <img src={getImagePath('searchResults/zeptoIcon.svg')} className='w-60 md:flex-[1_1_10%]'/>
                     </div>
                 </div>
             </div>
@@ -33,7 +30,7 @@ const BrandDetails = () => {
                 <div className='flex flex-col values py-5 px-10 md:items-center md:px-40 flex-[1_1_10%]'>
                     <div className='flex border-b-2 border-solid border-[#D9D9D9] py-5 leading-6 md:leading-8 items-center feedback_review_section'>
                         <div className="flex flex-[1_1_20%]">
-                            <img src={positiveRating} className='w-16 mx-4 md:mx-10'/>
+                            <img src={getImagePath('brandDetails/positiveRating.svg')} className='w-16 mx-4 md:mx-10'/>
                         </div>
                         <div className='flex flex-col flex-[1_1_100%]'>
                             <div className='font-semibold'>Ice Cream received was amazing</div>
@@ -42,7 +39,7 @@ const BrandDetails = () => {
                     </div>
                     <div className='flex border-b-2 border-solid border-[#D9D9D9] py-5 leading-6 md:leading-8 items-center feedback_review_section'>
                     <div className="flex flex-[1_1_20%]">
-                            <img src={negativeRating} className='w-16 mx-4 md:mx-10'/>
+                            <img src={getImagePath('brandDetails/negativeRating.svg')} className='w-16 mx-4 md:mx-10'/>
                         </div>
                         <div className='flex flex-col flex-[1_1_100%]'>
                             <div className='font-semibold'>Ice Cream received was amazing</div>
@@ -51,7 +48,7 @@ const BrandDetails = () => {
                     </div>
                     <div className='flex border-b-2 border-solid border-[#D9D9D9] py-5 leading-6 md:leading-8 items-center feedback_review_section'>
                     <div className="flex flex-[1_1_20%]">
-                            <img src={positiveRating} className='w-16 mx-4 md:mx-10'/>
+                            <img src={getImagePath('brandDetails/negativeRating.svg')} className='w-16 mx-4 md:mx-10'/>
                         </div>
                         <div className='flex flex-col flex-[1_1_100%]'>
                             <div className='font-medium'>Ice Cream received was amazing</div>

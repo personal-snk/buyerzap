@@ -1,5 +1,5 @@
 .for_business_page{
-    background-image: url(src/assets/business/business_header.svg);
+    background-image: url('https://buyezapassets.blob.core.windows.net/app-assets/business/business_header.svg');
     background-position: 100% 100%;
     background-repeat: no-repeat;
     min-height: 500px;

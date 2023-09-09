@@ -1,16 +1,13 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { useState } from 'react';
 import { useMediaQuery } from 'src/hooks/useMediaQuery';
-import crossIcon from 'src/assets/home/cross.svg';
-import menuIcon from 'src/assets/home/hamburger.svg';
-
 import './style.scss'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
+import { getImagePath } from 'src/utils';
 
 function NavBarDesktop() {
   const {
     user,
-    isAuthenticated,
     logout,
   } = useAuth0();
 
@@ -56,11 +53,11 @@ function NavBarDesktop() {
 
   return (
     isResponsive ? 
-    <div class="flex items-center justify-end mx-auto">
-      <div className="navbar-container">
+    <div class={`flex items-center justify-end mx-auto ${colorChange ? 'colorChange' : ''}`}>
+      <div className={`navbar-container`}>
         <button className="navbar-toggle" onClick={toggleNavbar}>
           <div className="navbar-toggle--icon">
-            {isOpen ? <img src={crossIcon} className='w-8 relative z-10'/>:<img src={menuIcon} className='w-8'/>}
+            {isOpen ? <img src={getImagePath('home/cross.svg')} className='w-8 relative z-10'/>:<img src={getImagePath('home/hamburger.svg')} className='w-8'/>}
           </div>
         </button>
         <nav className={`navbar ${isOpen ? 'opened' : 'closed'}`}>
@@ -68,7 +65,7 @@ function NavBarDesktop() {
             <li onClick={() => redirect('/')}><a>Home</a></li>
             <li onClick={() => redirect('/aboutus')}><a>About Buyerzap</a></li>
             <li onClick={() => redirect('/for_business')}><a>For Business</a></li>
-            <li onClick={() => redirect('/contact_us')}><a>Contact Us</a></li>
+            {/* <li onClick={() => redirect('/contact_us')}><a>Contact Us</a></li> */}
           </ul>
           <div className='bg-[#EBEBEB]'>
             <ul>
@@ -98,7 +95,7 @@ function NavBarDesktop() {
           <a onClick={() => redirect('/')} className="p-2 lg:px-4 md:mx-2 hover:bg-gray-200 rounded ">Home</a>
           <a onClick={() => redirect('/aboutus')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">About</a>
           <a onClick={() => redirect('/for_business')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">For Business</a>
-          <a onClick={() => redirect('/contact_us')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Contact Us</a>
+          {/* <a onClick={() => redirect('/contact_us')} className="p-2 lg:px-4 md:mx-2 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Contact Us</a> */}
         </div>
         <div className=" inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">    
         <div className="relative ">

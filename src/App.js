@@ -26,11 +26,11 @@ const App = () => {
   if(!isLoading && !isAuthenticated)
   {
     loginWithRedirect();
-    return <Loading />;
+    return <></>;
   }
 
   if (isLoading) {
-    return <Loading />;
+    return <></>;
   }
 
   return (

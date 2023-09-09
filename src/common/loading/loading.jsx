@@ -1,9 +1,9 @@
 import React from "react";
-import loading from "src/assets/loading.svg";
+import { getImagePath } from "src/utils";
 
 const Loading = () => (
   <div className="spinner">
-    <img src={loading} alt="Loading" />
+    <img src={getImagePath('loading.svg')} alt="Loading" />
   </div>
 );
 

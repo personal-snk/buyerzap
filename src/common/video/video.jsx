@@ -1,14 +1,12 @@
 import ReactPlayer from "react-player";
-import video from 'src/assets/home/buyerzap_video.mp4';
-import VideoIcon from 'src/assets/home/video_icon.svg';
+import { getImagePath } from "src/utils";
 
 const Video = ({props,className}) => {  
     return (
        <div className={`player-wrapper ${className}`}>
             <ReactPlayer
-            // light={<img src={VideoIcon} alt='Thumbnail' />}
             className='react-player fixed-bottom'
-            url= {video}
+            url= {getImagePath('home/buyerzap_video.mp4')}
             width='100%'
             height='100%'
             controls = {true}

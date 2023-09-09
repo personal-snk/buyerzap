@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
+import { getImagePath } from 'src/utils';
 import './style.scss'
 
 const teamsData = [{
@@ -49,7 +50,7 @@ export default function TeamsContainer() {
         <div className='flex flex-col justify-center md:flex-row mt-6'>
             <div className='team_carousel flex-[1_0_5%]'>
                 <div className='m-2 flex justify-center md:bg-[#fff] md:p-2 md:max-w-[60%] md:border-2 md:border-[#fff] md:border-solid md:rounded-3xl'>
-                    <img src={require(`src/assets/aboutUs/${teamImage}`)} className='rounded-lg h-48 md:h-auto md:w-[100%]' alt=''/>
+                    <img src={getImagePath(`aboutUs/${teamImage}`)} className='rounded-lg h-48 md:h-auto md:w-[100%]' alt=''/>
                 </div>
                 <div className='flex justify-center m-2 md:max-w-[60%] font-normal md:text-3xl text-[#000080]'>
                 {teamName}
@@ -70,7 +71,7 @@ export default function TeamsContainer() {
                                         setTeamName(member.name)
                                         setTeamPos(member.position)
                                         }}>
-                                        <img src={require(`src/assets/aboutUs/${member.imageSrc}`)} className='rounded-lg w-[130px]' alt=''/>
+                                        <img src={getImagePath(`aboutUs/${member.imageSrc}`)} className='rounded-lg w-[130px]' alt=''/>
                                     </div>
                         )}
                 </div>

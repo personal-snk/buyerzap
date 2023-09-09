@@ -1,10 +1,8 @@
-import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom';
 import HeaderContainerCustom from 'src/components/HeaderContainerCustom';
 import './styles.css';
-
-import senti from 'src/assets/business/senti.svg'
+import { getImagePath } from 'src/utils';
 
 const ForBusiness = () => {
 
@@ -29,49 +27,49 @@ const ForBusiness = () => {
                 </div>
                 <div className='flex analysis_container'>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
@@ -84,49 +82,49 @@ const ForBusiness = () => {
                 </div>
                 <div className='flex analysis_container'>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Real-Time Sentiment Monitoring</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
                     </div>
                     <div className='analysis_card'>
-                        <img src={senti}/>
+                        <img src={getImagePath('business/senti.svg')} alt='sentiment'/>
                         <div className='card_header'>Overall Sentiment Analytics</div>
                         <div className='card_desc'>Stay in tune with your brand perception using our continuous social media tracking. We also aid in closing the feedback loop for ...</div>
                         <div>Learn More</div>
