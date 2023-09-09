@@ -94,15 +94,7 @@
     border: 1px solid;
     background: linear-gradient(180deg, #000132 0%, #000266 100%),linear-gradient(180deg, rgba(0, 6, 227, 0.68) 0%, #000138 100%); 
   }
-  
-  /**
-   * Options
-   */
-  .select-search-option {
-    list-style: none;
-    background-color: transparent;
-  }
-  
+
   /**
    * Option row
    */
@@ -114,6 +106,9 @@
    * Option
    */
   .select-search-option {
+    list-style: none;
+    background-color: transparent;
+    color: white;
     border: none;
     outline: none;
     font-family: "Helvetica Neue", sans-serif;
@@ -133,10 +128,13 @@
   }
 
   .select-search-row{
-    padding: 10px;
+    padding: 5px;
     @media only screen and (max-width:480px) {
       padding: 4px;
     }
+    // &:hover{
+    //   background-color: rgb(255 255 255 / 10%);
+    // }
   }
   
   .select-search--multiple .select-search__option {
@@ -159,6 +157,10 @@
     color: #fff;
   }
   
+  .select-search-is-highlighted, .select-search-option:not(.select-search-is-selected):hover {
+    background-color: rgb(255 255 255 / 10%);
+  }
+
   /**
    * Group
    */

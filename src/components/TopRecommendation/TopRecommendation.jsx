@@ -6,9 +6,9 @@ export default function TopRecommendation(props) {
     return (
         <div className='recommendation_container py-5 md:py-8'>
             <div className='flex text-3xl font-medium text-center justify-center'>{props.title}</div>
-            <div className='flex text-sm font-light my-2 justify-center'>{props.subtitle}</div>
+            {/* <div className='flex text-sm font-light my-2 justify-center'>{props.subtitle}</div>
             <div className='tab_switcher flex flex-col flex-1 p-2'>
-            </div>
+            </div> */}
             <div className='flex flex-row metrics_graph_container w-[100%] h-[360px] md:ml-20 md:w-[90%]'>
                 <BarChart/>
             </div>

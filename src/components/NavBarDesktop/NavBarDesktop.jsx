@@ -30,6 +30,7 @@ function NavBarDesktop() {
     history.push({
       pathname: path,
     });
+    toggleNavbar();
   };
 
   const logoutWithRedirect = () =>
@@ -61,14 +62,14 @@ function NavBarDesktop() {
           </div>
         </button>
         <nav className={`navbar ${isOpen ? 'opened' : 'closed'}`}>
-          <ul className=''>
+          <ul className='px-8 py-8'>
             <li onClick={() => redirect('/')}><a>Home</a></li>
             <li onClick={() => redirect('/aboutus')}><a>About Buyerzap</a></li>
             <li onClick={() => redirect('/for_business')}><a>For Business</a></li>
           </ul>
           <div className='bg-[#EBEBEB]'>
-            <ul className='px-2 py-1'>
-              <li className='pb-4 grid grid-cols-4 gap-2'>
+            <ul className='px-8 py-4'>
+              <li className='pb-2 grid grid-cols-4 gap-2'>
                 <img src={user.picture} className='userPic w-16 rounded-full'/>
                 <div className=''>
                   <div className='text-md'>Welcome</div>
